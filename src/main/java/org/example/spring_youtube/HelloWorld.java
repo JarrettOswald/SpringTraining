@@ -1,9 +1,9 @@
 package org.example.spring_youtube;
 
-public class HelloWorld implements MessageRander {
+public class HelloWorld implements Message {
 
     @Override
-    public String renderMessage() {
+    public String getMessage() {
         return "Hello World!";
     }
 }

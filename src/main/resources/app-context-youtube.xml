@@ -3,7 +3,20 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation=
                "http://www.springframework.org/schema/beans
-                http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="render"
-          class="org.example.spring_youtube.HelloWorld"/>
+                http://www.springframework.org/schema/beans/spring-beans.xsd
+                http://www.springframework.org/schema/context
+                http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="messageWorld"
+          class="org.example.spring_youtube.HelloWorld">
+    </bean>
+
+    <bean id="messageLanit"
+          class="org.example.spring_youtube.HelloLanit">
+    </bean>
+
+    <bean id="messageRender"
+          class="org.example.spring_youtube.MessageRender">
+        <constructor-arg ref="messageLanit"/>
+    </bean>
 </beans>

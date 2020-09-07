@@ -1,8 +1,9 @@
 package org.example.spring_youtube;
 
-public class HelloLanit implements MessageRander {
+public class HelloLanit implements Message {
+
     @Override
-    public String renderMessage() {
+    public String getMessage() {
         return "Привет Ланит!";
     }
 }
