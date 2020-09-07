@@ -6,8 +6,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class AppYouTube {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("/app-context-youtube.xml");
-
-        MessageRender messageRender = context.getBean("messageRender",MessageRender.class);
+        MessageRender messageRender = context.getBean("messageRender", MessageRender.class);
         messageRender.renderMessage();
+        System.out.println(messageRender.nameHost);
+        System.out.println(messageRender.ping);
     }
 }
