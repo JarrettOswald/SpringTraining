@@ -1,4 +1,4 @@
-package org.example;
+package org.example.spring_in_action;
 
 public class HelloWorldMessageProvider implements MessageProvider {
 
