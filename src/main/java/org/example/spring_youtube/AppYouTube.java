@@ -8,7 +8,8 @@ public class AppYouTube {
         ApplicationContext context = new ClassPathXmlApplicationContext("/app-context-youtube.xml");
         MessageRender messageRender = context.getBean("messageRender", MessageRender.class);
         messageRender.renderMessage();
-        System.out.println(messageRender.nameHost);
-        System.out.println(messageRender.ping);
+        System.out.println(messageRender.getNameHost());
+        System.out.println(messageRender.getPing());
+        System.out.println(messageRender.getList());
     }
 }

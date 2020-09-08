@@ -1,9 +1,12 @@
 package org.example.spring_youtube;
 
+import java.util.List;
+
 public class MessageRender {
-    Message message;
-    int ping;
-    String nameHost;
+    private Message message;
+    private int ping;
+    private String nameHost;
+    private List<String> list;
 
     MessageRender() {
     }
@@ -38,5 +41,13 @@ public class MessageRender {
 
     public void setNameHost(String nameHost) {
         this.nameHost = nameHost;
+    }
+
+    public List<String> getList() {
+        return list;
+    }
+
+    public void setList(List<String> list) {
+        this.list = list;
     }
 }

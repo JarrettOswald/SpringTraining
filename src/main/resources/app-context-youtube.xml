@@ -23,6 +23,15 @@
 
         <property name="ping" value="${messageRender.ping}"/>
         <property name="nameHost" value="${messageRender.hostName}"/>
+        <property name="list">
+            <list>
+                <value>First value</value>
+                <value>Second value</value>
+            </list>
+        </property>
+
+
     </bean>
+
 
 </beans>
