@@ -8,8 +8,12 @@ public class AppYouTube {
         ApplicationContext context = new ClassPathXmlApplicationContext("/app-context-youtube.xml");
         MessageRender messageRender = context.getBean("messageRender", MessageRender.class);
         messageRender.renderMessage();
-        System.out.println(messageRender.getNameHost());
-        System.out.println(messageRender.getPing());
-        System.out.println(messageRender.getList());
+        System.out.println("Хост по дефолу "+messageRender.getNameHost());
+        System.out.println("Измененный хост");
+        messageRender.setNameHost("host2");
+        MessageRender messageRender2 = context.getBean("messageRender", MessageRender.class);
+        System.out.println(messageRender2.getNameHost());
+
+
     }
 }

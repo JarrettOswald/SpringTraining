@@ -18,7 +18,8 @@
     </bean>
 
     <bean id="messageRender"
-          class="org.example.spring_youtube.MessageRender">
+          class="org.example.spring_youtube.MessageRender"
+    scope="prototype">
         <property name="message" ref="messageLanit"/>
 
         <property name="ping" value="${messageRender.ping}"/>
