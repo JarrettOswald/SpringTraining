@@ -6,37 +6,38 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:component-scan base-package="org.example"/>
 
-    <context:property-placeholder location="classpath:messageRender.properties"/>
+    <!--    <context:property-placeholder location="classpath:messageRender.properties"/>-->
 
-    <bean id="messageWorld"
-          class="org.example.spring_youtube.HelloWorld"
-          init-method="init"
-          destroy-method="destroy"
-          factory-method="go">
+    <!--    <bean id="messageWorld"-->
+    <!--          class="org.example.spring_youtube.HelloWorld"-->
+    <!--          init-method="init"-->
+    <!--          destroy-method="destroy"-->
+    <!--          factory-method="go">-->
 
-    </bean>
+    <!--    </bean>-->
 
-    <bean id="messageLanit"
-          class="org.example.spring_youtube.HelloLanit">
-    </bean>
+    <!--    <bean id="messageLanit"-->
+    <!--          class="org.example.spring_youtube.HelloLanit">-->
+    <!--    </bean>-->
 
-    <bean id="messageRender"
-          class="org.example.spring_youtube.MessageRender"
-          scope="prototype">
-        <property name="message" ref="messageLanit"/>
+    <!--    <bean id="messageRender"-->
+    <!--          class="org.example.spring_youtube.MessageRender"-->
+    <!--          scope="prototype">-->
+    <!--        <property name="message" ref="messageLanit"/>-->
 
-        <property name="ping" value="${messageRender.ping}"/>
-        <property name="nameHost" value="${messageRender.hostName}"/>
-        <property name="list">
-            <list>
-                <value>First value</value>
-                <value>Second value</value>
-            </list>
-        </property>
+    <!--        <property name="ping" value="${messageRender.ping}"/>-->
+    <!--        <property name="nameHost" value="${messageRender.hostName}"/>-->
+    <!--        <property name="list">-->
+    <!--            <list>-->
+    <!--                <value>First value</value>-->
+    <!--                <value>Second value</value>-->
+    <!--            </list>-->
+    <!--        </property>-->
 
 
-    </bean>
+    <!--    </bean>-->
 
 
 </beans>
