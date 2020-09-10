@@ -8,8 +8,9 @@ public class MessageRender {
     private String nameHost;
     private List<String> list;
 
-    MessageRender() {
+    private MessageRender() {
     }
+
 
     MessageRender(Message message) {
         this.message = message;

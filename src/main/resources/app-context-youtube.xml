@@ -10,7 +10,11 @@
     <context:property-placeholder location="classpath:messageRender.properties"/>
 
     <bean id="messageWorld"
-          class="org.example.spring_youtube.HelloWorld">
+          class="org.example.spring_youtube.HelloWorld"
+          init-method="init"
+          destroy-method="destroy"
+          factory-method="go">
+
     </bean>
 
     <bean id="messageLanit"
@@ -19,7 +23,7 @@
 
     <bean id="messageRender"
           class="org.example.spring_youtube.MessageRender"
-    scope="prototype">
+          scope="prototype">
         <property name="message" ref="messageLanit"/>
 
         <property name="ping" value="${messageRender.ping}"/>
