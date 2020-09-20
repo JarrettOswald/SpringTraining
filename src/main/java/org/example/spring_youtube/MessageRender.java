@@ -1,7 +1,11 @@
 package org.example.spring_youtube;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import java.util.List;
 
+@Component
 public class MessageRender {
     private Message message;
     private int ping;
@@ -11,7 +15,7 @@ public class MessageRender {
     private MessageRender() {
     }
 
-
+    @Autowired
     MessageRender(Message message) {
         this.message = message;
     }
@@ -20,8 +24,8 @@ public class MessageRender {
         this.message = message;
     }
 
-    public void renderMessage() {
-        System.out.println("Message: " + message.getMessage());
+    public String renderMessage() {
+        return "Message: " + message.getMessage();
     }
 
     public Message getMessage() {

@@ -7,14 +7,21 @@ public class AppYouTube {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("app-context-youtube.xml");
 
-        Message messageL = context.getBean("helloLanit", Message.class);
-        Message messageW = context.getBean("helloWorld", Message.class);
+//        Message messageL = context.getBean("helloLanit", Message.class);
+//        Message messageW = context.getBean("helloWorld", Message.class);
+//
+//        MessageRender messageRender2 = new MessageRender(messageW);
+//        MessageRender messageRender = new MessageRender(messageL);
+//
+//        messageRender.renderMessage();
+//        messageRender2.renderMessage();
 
-        MessageRender messageRender2 = new MessageRender(messageW);
-        MessageRender messageRender = new MessageRender(messageL);
+//        MessageRender messageRender = context.getBean("messageRender",MessageRender.class);
 
-        messageRender.renderMessage();
-        messageRender2.renderMessage();
+//        messageRender.renderMessage();
+
+        Coputer coputer = context.getBean("coputer",Coputer.class);
+        System.out.println(coputer.toString());
 
     }
 }

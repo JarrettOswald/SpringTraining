@@ -2,7 +2,7 @@ package org.example.spring_youtube;
 
 import org.springframework.stereotype.Component;
 
-@Component("helloWorld")
+//@Component("helloWorld")
 public class HelloWorld implements Message {
 
     @Override
@@ -11,10 +11,6 @@ public class HelloWorld implements Message {
         return "Hello World!";
     }
 
-    public static HelloWorld go() {
-        System.out.println("Создаем объект HelloWorld");
-        return new HelloWorld();
-    }
 
     public void init() {
         System.out.println("-------------");
