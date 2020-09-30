@@ -7,14 +7,8 @@ public class AppYouTube {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("app-context-youtube.xml");
 
-        Message messageL = context.getBean("helloLanit", Message.class);
-        Message messageW = context.getBean("helloWorld", Message.class);
+        MessageRender messageRender = context.getBean("render", MessageRender.class);
 
-        MessageRender messageRender2 = new MessageRender(messageW);
-        MessageRender messageRender = new MessageRender(messageL);
-
-        messageRender.renderMessage();
-        messageRender2.renderMessage();
-
+        messageRender.renderMessage(MessageEnum.LANIT);
     }
 }

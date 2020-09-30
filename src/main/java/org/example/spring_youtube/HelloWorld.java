@@ -5,23 +5,12 @@ import org.springframework.stereotype.Component;
 @Component("helloWorld")
 public class HelloWorld implements Message {
 
+    private String[] message = new String[]{"Привет Мир", "Привет Java", "Привет всем"};
+
     @Override
     public String getMessage() {
-
-        return "Hello World!";
-    }
-
-    public static HelloWorld go() {
-        System.out.println("Создаем объект HelloWorld");
-        return new HelloWorld();
-    }
-
-    public void init() {
-        System.out.println("-------------");
-    }
-
-    public void destroy() {
-        System.out.println("-------------");
+        int randomCount = (int) (Math.random()*3);
+        return message[randomCount];
     }
 
 }
