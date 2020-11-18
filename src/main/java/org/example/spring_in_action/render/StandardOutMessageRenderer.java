@@ -1,9 +1,11 @@
-package org.example.spring_in_action;
+package org.example.spring_in_action.render;
 
+import org.example.spring_in_action.provider.MessageProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component("renderer")
+@Service("renderer")
 public class StandardOutMessageRenderer implements MessageRenderer {
 
     private MessageProvider messageProvider;
@@ -14,6 +16,7 @@ public class StandardOutMessageRenderer implements MessageRenderer {
         }
         System.out.println(messageProvider.getMessage());
     }
+
     @Autowired
     public void setMessageProvider(MessageProvider provider) {
         this.messageProvider = provider;
