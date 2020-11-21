@@ -1,4 +1,4 @@
-package org.example.spring_in_action.model;
+package org.example.spring_in_action.default_example.model;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;

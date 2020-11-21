@@ -1,17 +1,16 @@
-package org.example.spring_in_action.config;
+package org.example.spring_in_action.default_example.config;
 
-import org.example.spring_in_action.provider.HelloWorldMessageProvider;
-import org.example.spring_in_action.provider.MessageProvider;
-import org.example.spring_in_action.render.MessageRenderer;
-import org.example.spring_in_action.render.StandardOutMessageRenderer;
+import org.example.spring_in_action.default_example.provider.HelloWorldMessageProvider;
+import org.example.spring_in_action.default_example.provider.MessageProvider;
+import org.example.spring_in_action.default_example.render.MessageRenderer;
+import org.example.spring_in_action.default_example.render.StandardOutMessageRenderer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.ImportResource;
 
 @Configuration
 @ComponentScan("org.example")
-//@ImportResource(locations = {"app-context.xml"})
+//@ImportResource(locations = {"child-context.xml"})
 
 public class AppConfiguration {
 

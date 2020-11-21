@@ -1,4 +1,4 @@
-package org.example.spring_in_action.provider;
+package org.example.spring_in_action.default_example.provider;
 
 import org.springframework.stereotype.Component;
 
